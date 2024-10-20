@@ -24,7 +24,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_auto_complete_input"
-        style="@style/TextDropDownLayoutStyle"
+        style="?attr/textInputOutlinedExposedDropdownMenuStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
@@ -32,7 +32,6 @@
 
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/ed_ti_auto_complete_input"
-            style="@style/TextInputEditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:singleLine="true"

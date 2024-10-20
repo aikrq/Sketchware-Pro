@@ -1,20 +1,22 @@
 <resources>
     <style name="Base.Theme.SketchwarePro" parent="Scheme.SketchwarePro.DayNight" />
     <style name="Theme.SketchwarePro" parent="Platform.Theme.SketchwarePro">
+        <!-- Styles & themes -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.SketchwarePro.BottomSheetDialog</item>
         <item name="chipStyle">@style/ChipStyle</item>
         <item name="collapsingToolbarLayoutStyle">?attr/collapsingToolbarLayoutLargeStyle</item>
         <item name="collapsingToolbarLayoutLargeSize">@dimen/collapsing_toolbar_large_size</item>
         <item name="collapsingToolbarLayoutLargeStyle">@style/Widget.SketchwarePro.CollapsingToolbar</item>
         <item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_material</item>
+        <item name="switchPreferenceCompatStyle">@style/Widget.SketchwarePro.Preference.SwitchPreferenceCompat</item>
+        <item name="tabStyle">@style/Widget.SketchwarePro.TabLayout</item>
         <item name="textInputStyle">@style/Widget.SketchwarePro.TextInputLayout</item>
+        <item name="textInputOutlinedStyle">@style/Widget.SketchwarePro.TextInputLayout</item>
+        <item name="textInputOutlinedExposedDropdownMenuStyle">@style/Widget.SketchwarePro.TextInputLayout.ExposedDropdownMenu</item>
 
+        <!-- App font -->
         <item name="fontFamily">@font/gilroy</item>
         <item name="android:fontFamily">@font/gilroy</item>
-        <item name="switchPreferenceCompatStyle">
-            @style/Preference.SketchwarePro.SwitchPreferenceCompat
-        </item>
-        <item name="popupMenuStyle">@style/Widget.Material3.PopupMenu</item>
-        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.SketchwarePro.BottomSheetDialog</item>
     </style>
 
     <style name="Theme.SketchwarePro.Main">
