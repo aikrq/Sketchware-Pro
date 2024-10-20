@@ -13,7 +13,7 @@ public class IconSwitch extends IconBase {
 
     public void a(Context context) {
         super.a(context);
-        setWidgetImage(R.drawable.widget_switch);
+        setWidgetImage(R.drawable.ic_toggle_on_24);
         setWidgetName("Switch");
     }
 

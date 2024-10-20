@@ -13,7 +13,7 @@ public class IconEditText extends IconBase {
 
     public void a(Context context) {
         super.a(context);
-        setWidgetImage(R.drawable.widget_edit_text);
+        setWidgetImage(R.drawable.ic_text_fields_alt_24);
         setWidgetName("EditText");
     }
 

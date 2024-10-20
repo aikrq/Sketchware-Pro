@@ -13,7 +13,7 @@ public class IconCheckBox extends IconBase {
 
     public void a(Context context) {
         super.a(context);
-        setWidgetImage(R.drawable.widget_check_box);
+        setWidgetImage(R.drawable.ic_check_box_24);
         setWidgetName("CheckBox");
     }
 

@@ -13,7 +13,7 @@ public class IconCalendarView extends IconBase {
 
     public void a(Context context) {
         super.a(context);
-        setWidgetImage(R.drawable.widget_calendarview);
+        setWidgetImage(R.drawable.ic_calendar_today_24);
         setWidgetName("CalendarView");
     }
 

@@ -1017,7 +1017,7 @@ public class ViewEditor extends RelativeLayout implements View.OnClickListener, 
         public void a(PaletteGroup group) {
             imgGroup.setImageResource(group == PaletteGroup.BASIC ?
                     R.drawable.selector_palette_tab_ic_sketchware :
-                    R.drawable.selector_palette_tab_ic_bookmark);
+                    R.drawable.selector_palette_tab_ic_bookmark_filled);
             setOnClickListener(this);
         }
     }

@@ -14,7 +14,7 @@ public class IconGridView extends IconBase {
 
     public IconGridView(Context context) {
         super(context);
-        setWidgetImage(R.drawable.grid_3_48);
+        setWidgetImage(R.drawable.ic_view_list_24);
         setWidgetName("GridView");
     }
 
