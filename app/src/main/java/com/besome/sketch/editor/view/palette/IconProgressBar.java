@@ -13,7 +13,7 @@ public class IconProgressBar extends IconBase {
 
     public void a(Context context) {
         super.a(context);
-        setWidgetImage(R.drawable.widget_progress_bar);
+        setWidgetImage(R.drawable.ic_sliders_24);
         setWidgetName("ProgressBar");
     }
 

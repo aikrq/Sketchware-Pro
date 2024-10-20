@@ -13,7 +13,7 @@ public class IconSwipeRefreshLayout extends IconBase {
 
     public IconSwipeRefreshLayout(Context context) {
         super(context);
-        setWidgetImage(R.drawable.widget_swipe_refresh);
+        setWidgetImage(R.drawable.ic_refresh_24);
         setWidgetName("SwipeRefreshLayout");
     }
 

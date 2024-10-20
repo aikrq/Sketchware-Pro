@@ -16,6 +16,7 @@ import a.a.a.wB;
 public class BaseWidget extends LinearLayout {
     private ImageView img_widget;
     private TextView tv_widget;
+    private View divider_widget;
     @DrawableRes
     private int widgetImgResId;
     private int widgetType;
@@ -24,7 +25,8 @@ public class BaseWidget extends LinearLayout {
         super(context);
         View.inflate(context, R.layout.widget_layout, this);
 
-        setOrientation(HORIZONTAL);
+        setDrawingCacheEnabled(true);
+        setOrientation(VERTICAL);
         setGravity(Gravity.CENTER);
 
         a(context);
@@ -33,9 +35,7 @@ public class BaseWidget extends LinearLayout {
     public void a(Context context) {
         img_widget = findViewById(R.id.img_widget);
         tv_widget = findViewById(R.id.tv_widget);
-
-        setBackgroundResource(R.drawable.icon_bg);
-        setDrawingCacheEnabled(true);
+        divider_widget = findViewById(R.id.divider_widget);
     }
 
     public int getWidgetImageResId() {
@@ -65,6 +65,10 @@ public class BaseWidget extends LinearLayout {
 
     public void setWidgetType(a widgetType) {
         this.widgetType = widgetType.ordinal();
+    }
+
+    public void setHideDivider(boolean hideDivider) {
+        divider_widget.setVisibility(hideDivider ? View.GONE : View.VISIBLE);
     }
 
     public enum a {

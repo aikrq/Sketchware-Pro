@@ -13,7 +13,7 @@ public class IconTextView extends IconBase {
 
     public void a(Context context) {
         super.a(context);
-        setWidgetImage(R.drawable.widget_text_view);
+        setWidgetImage(R.drawable.ic_text_fields_24);
         setWidgetName("TextView");
     }
 

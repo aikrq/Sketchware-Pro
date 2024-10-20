@@ -51,7 +51,6 @@ public class PaletteWidget extends LinearLayout {
 
     private LinearLayout layoutContainer;
     private LinearLayout widgetsContainer;
-    private View divider;
     private TextView titleLayouts;
     private TextView titleWidgets;
     private CustomScrollView scrollView;
@@ -82,7 +81,7 @@ public class PaletteWidget extends LinearLayout {
         return layout;
     }
 
-    public View a(PaletteWidget.b widgetType, String tag, String text, String resourceName) {
+    public View a(PaletteWidget.b widgetType, String tag, String text, String resourceName, boolean hideDivider) {
         IconBase iconBase;
         switch (widgetType) {
             case a:
@@ -152,6 +151,7 @@ public class PaletteWidget extends LinearLayout {
 
         iconBase.setText(text);
         iconBase.setName(resourceName);
+        iconBase.setHideDivider(hideDivider);
         widgetsContainer.addView(iconBase);
         return iconBase;
     }
@@ -164,7 +164,6 @@ public class PaletteWidget extends LinearLayout {
         wB.a(context, this, R.layout.palette_widget);
         layoutContainer = findViewById(R.id.layout);
         widgetsContainer = findViewById(R.id.widget);
-        divider = findViewById(R.id.divider);
         titleLayouts = findViewById(R.id.tv_layout);
         titleWidgets = findViewById(R.id.tv_widget);
         titleLayouts.setText(Helper.getResString(R.string.view_panel_title_layouts));
@@ -179,15 +178,9 @@ public class PaletteWidget extends LinearLayout {
     public void extraTitle(String title, int targetType) {
         LinearLayout target = targetType == 0 ? layoutContainer : widgetsContainer;
 
-        LinearLayout divider = new LinearLayout(getContext());
-        divider.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dpToPx(1)));
-        divider.setOrientation(LinearLayout.HORIZONTAL);
-        divider.setBackgroundColor(Color.parseColor("#00000000"));
-        target.addView(divider);
-
         TextView titleView = new TextView(getContext());
         LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.setMargins(dpToPx(4), dpToPx(4), dpToPx(4), dpToPx(4));
+        layoutParams.setMargins(dpToPx(6), dpToPx(6), dpToPx(6), dpToPx(6));
         titleView.setLayoutParams(layoutParams);
         titleView.setText(title);
         titleView.setTextSize(12);
@@ -195,7 +188,7 @@ public class PaletteWidget extends LinearLayout {
         target.addView(titleView);
     }
 
-    public View extraWidget(String tag, String title, String name) {
+    public View extraWidget(String tag, String title, String name, boolean hideDivider) {
         IconBase iconBase;
         Context context = getContext();
         iconBase = switch (title) {
@@ -230,11 +223,12 @@ public class PaletteWidget extends LinearLayout {
 
         iconBase.setText(title);
         iconBase.setName(name);
+        iconBase.setHideDivider(hideDivider);
         widgetsContainer.addView(iconBase);
         return iconBase;
     }
 
-    public View extraWidgetLayout(String tag, String name) {
+    public View extraWidgetLayout(String tag, String name, boolean hideDivider) {
         IconBase iconBase;
         Context context = getContext();
         iconBase = switch (name) {
@@ -251,13 +245,13 @@ public class PaletteWidget extends LinearLayout {
             iconBase.setTag(tag);
         }
 
+        iconBase.setHideDivider(hideDivider);
         layoutContainer.addView(iconBase);
         return iconBase;
     }
 
     public void setLayoutVisible(int visibility) {
         layoutContainer.setVisibility(visibility);
-        divider.setVisibility(visibility);
         titleLayouts.setVisibility(visibility);
     }
 
