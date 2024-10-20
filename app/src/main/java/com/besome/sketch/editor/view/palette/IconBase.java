@@ -11,7 +11,6 @@ public class IconBase extends BaseWidget {
 
     public IconBase(Context context) {
         super(context);
-        setBackgroundResource(R.drawable.icon_bg);
     }
 
     public ViewBean getBean() {

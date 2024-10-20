@@ -1,20 +1,37 @@
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/img_widget"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="4dp"
-        android:layout_gravity="center" />
-
-    <TextView
-        android:id="@+id/tv_widget"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="3dp"
-        android:layout_gravity="center"
-        android:textAppearance="?attr/textAppearanceBodySmall"
-        android:textSize="11sp" />
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/img_widget"
+            android:layout_width="14dp"
+            android:layout_height="14dp" />
+
+        <TextView
+            android:id="@+id/tv_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerInsetEnd="6dp"
+        app:dividerInsetStart="24dp"
+        app:dividerThickness="0.5dp" />
 
 </merge>

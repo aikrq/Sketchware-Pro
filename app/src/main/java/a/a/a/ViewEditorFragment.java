@@ -218,7 +218,7 @@ public class ViewEditorFragment extends qA {
         viewEditor.addWidget(PaletteWidget.b.b, "", "TextView", "TextView");
         viewEditor.addWidgetLayout(PaletteWidget.a.c, "");
         viewEditor.addWidgetLayout(PaletteWidget.a.d, "");
-        viewEditor.extraWidgetLayout("", "RadioGroup");
+        viewEditor.extraWidgetLayout("", "RadioGroup", true);
 
         viewEditor.paletteWidget.extraTitle("AndroidX", 0);
         viewEditor.extraWidgetLayout("", "TabLayout");
@@ -226,7 +226,7 @@ public class ViewEditorFragment extends qA {
         viewEditor.extraWidgetLayout("", "CollapsingToolbarLayout");
         viewEditor.extraWidgetLayout("", "CardView");
         viewEditor.extraWidgetLayout("", "TextInputLayout");
-        viewEditor.extraWidgetLayout("", "SwipeRefreshLayout");
+        viewEditor.extraWidgetLayout("", "SwipeRefreshLayout", true);
 
         viewEditor.addWidget(PaletteWidget.b.c, "", "EditText", "Edit Text");
         viewEditor.extraWidget("", "AutoCompleteTextView", "AutoCompleteTextView");
@@ -243,34 +243,34 @@ public class ViewEditorFragment extends qA {
         viewEditor.extraWidget("", "RatingBar", "RatingBar");
         viewEditor.extraWidget("", "SearchView", "SearchView");
         viewEditor.extraWidget("", "VideoView", "VideoView");
-        viewEditor.addWidget(PaletteWidget.b.h, "", "WebView", "WebView");
+        viewEditor.addWidget(PaletteWidget.b.h, "", "WebView", "WebView", true);
 
         viewEditor.paletteWidget.extraTitle("List", 1);
         viewEditor.addWidget(PaletteWidget.b.e, "", "ListView", "ListView");
         viewEditor.extraWidget("", "GridView", "GridView");
         viewEditor.extraWidget("", "RecyclerView", "RecyclerView");
         viewEditor.addWidget(PaletteWidget.b.f, "", "Spinner", "Spinner");
-        viewEditor.extraWidget("", "ViewPager", "ViewPager");
+        viewEditor.extraWidget("", "ViewPager", "ViewPager", true);
 
         viewEditor.paletteWidget.extraTitle("Library", 1);
         viewEditor.extraWidget("", "WaveSideBar", "WaveSideBar");
         viewEditor.extraWidget("", "PatternLockView", "PatternLockView");
         viewEditor.extraWidget("", "CodeView", "CodeView");
         viewEditor.extraWidget("", "LottieAnimation", "LottieAnimation");
-        viewEditor.extraWidget("", "OTPView", "OTPView");
+        viewEditor.extraWidget("", "OTPView", "OTPView", true);
 
         viewEditor.paletteWidget.extraTitle("Google", 1);
         viewEditor.addWidget(PaletteWidget.b.l, "", "AdView", "AdView");
         viewEditor.addWidget(PaletteWidget.b.n, "", "MapView", "MapView");
         viewEditor.extraWidget("", "SignInButton", "SignInButton");
-        viewEditor.extraWidget("", "YoutubePlayer", "YoutubePlayer");
+        viewEditor.extraWidget("", "YoutubePlayer", "YoutubePlayer", true);
 
         viewEditor.paletteWidget.extraTitle("Date & Time", 1);
         viewEditor.extraWidget("", "AnalogClock", "AnalogClock");
         viewEditor.extraWidget("", "DigitalClock", "DigitalClock");
         viewEditor.extraWidget("", "TimePicker", "TimePicker");
         viewEditor.extraWidget("", "DatePicker", "DatePicker");
-        viewEditor.addWidget(PaletteWidget.b.k, "", "CalendarView", "CalendarView");
+        viewEditor.addWidget(PaletteWidget.b.k, "", "CalendarView", "CalendarView", true);
     }
 
     private void startAnimation() {
