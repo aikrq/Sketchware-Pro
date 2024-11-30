@@ -164,6 +164,7 @@ public class lC {
 
     public static void b(String str, HashMap<String, Object> hashMap) {
         HashMap<String, Object> hashMap2 = hashMap;
+        String str1 = "color_background";
         String str2 = "color_control_highlight";
         String str3 = "color_primary_dark";
         String str4 = "color_primary";
@@ -208,6 +209,7 @@ public class lC {
                     a.put(str5, hashMap2.get(str5));
                     a.put(str4, hashMap2.get(str4));
                     a.put(str3, hashMap2.get(str3));
+                    a.put(str1, hashMap2.get(str1));
                     path = str2;
                     a.put(path, hashMap2.get(path));
                     path = str15;

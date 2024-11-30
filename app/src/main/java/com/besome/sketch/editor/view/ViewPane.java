@@ -30,6 +30,8 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
+
 import com.besome.sketch.beans.ImageBean;
 import com.besome.sketch.beans.LayoutBean;
 import com.besome.sketch.beans.ProjectResourceBean;
@@ -320,6 +322,10 @@ public class ViewPane extends RelativeLayout {
         rootLayout = (ViewGroup) rootView;
         rootLayout.setBackgroundColor(0xffeeeeee);
         addView(rootView);
+    }
+
+    public void setRootBackgroundColor(@ColorInt int backgroundColor) {
+        rootLayout.setBackgroundColor(backgroundColor);
     }
 
     private void updateItemView(View view, ViewBean viewBean) {

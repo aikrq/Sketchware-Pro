@@ -1,5 +1,11 @@
 package com.besome.sketch.projects;
 
+import static mod.hey.studios.util.ProjectFile.COLOR_ACCENT;
+import static mod.hey.studios.util.ProjectFile.COLOR_BACKGROUND;
+import static mod.hey.studios.util.ProjectFile.COLOR_CONTROL_HIGHLIGHT;
+import static mod.hey.studios.util.ProjectFile.COLOR_CONTROL_NORMAL;
+import static mod.hey.studios.util.ProjectFile.COLOR_PRIMARY;
+import static mod.hey.studios.util.ProjectFile.COLOR_PRIMARY_DARK;
 import static mod.hey.studios.util.ProjectFile.getDefaultColor;
 
 import android.content.Context;
@@ -57,8 +63,8 @@ public class MyProjectSettingActivity extends BaseAppCompatActivity implements V
     public MyprojectSettingBinding binding;
 
     private static final int REQUEST_CODE_CREATE_ICON = 200212;
-    private final String[] themeColorKeys = {"color_accent", "color_primary", "color_primary_dark", "color_control_highlight", "color_control_normal"};
-    private final String[] themeColorLabels = {"colorAccent", "colorPrimary", "colorPrimaryDark", "colorControlHighlight", "colorControlNormal"};
+    private final String[] themeColorKeys = {COLOR_ACCENT, COLOR_PRIMARY, COLOR_PRIMARY_DARK, COLOR_CONTROL_HIGHLIGHT, COLOR_CONTROL_NORMAL, COLOR_BACKGROUND};
+    private final String[] themeColorLabels = {"colorAccent", "colorPrimary", "colorPrimaryDark", "colorControlHighlight", "colorControlNormal", "colorBackground"};
     private final int[] projectThemeColors = new int[themeColorKeys.length];
     private UB projectPackageNameValidator;
     private VB projectNameValidator;
@@ -116,6 +122,7 @@ public class MyProjectSettingActivity extends BaseAppCompatActivity implements V
         projectThemeColors[2] = getDefaultColor(ProjectFile.COLOR_PRIMARY_DARK);
         projectThemeColors[3] = getDefaultColor(ProjectFile.COLOR_CONTROL_HIGHLIGHT);
         projectThemeColors[4] = getDefaultColor(ProjectFile.COLOR_CONTROL_NORMAL);
+        projectThemeColors[5] = getDefaultColor(ProjectFile.COLOR_BACKGROUND);
 
         for (int i = 0; i < themeColorKeys.length; i++) {
             ThemeColorView colorView = new ThemeColorView(this, i);

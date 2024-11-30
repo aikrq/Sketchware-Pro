@@ -110,6 +110,8 @@ public class yq {
 
     public final int colorControlNormal;
 
+    public final int colorBackground;
+
     public final String versionCode;
 
     public final String versionName;
@@ -227,6 +229,7 @@ public class yq {
         colorPrimaryDark = yB.a(metadata, ProjectFile.COLOR_PRIMARY_DARK, getDefaultColor(ProjectFile.COLOR_PRIMARY_DARK));
         colorControlHighlight = yB.a(metadata, ProjectFile.COLOR_CONTROL_HIGHLIGHT, getDefaultColor(ProjectFile.COLOR_CONTROL_HIGHLIGHT));
         colorControlNormal = yB.a(metadata, ProjectFile.COLOR_CONTROL_NORMAL, getDefaultColor(ProjectFile.COLOR_CONTROL_NORMAL));
+        colorBackground = yB.a(metadata, ProjectFile.COLOR_BACKGROUND, getDefaultColor(ProjectFile.COLOR_BACKGROUND));
 
         projectSettings = new ProjectSettings(sc_id);
         fileUtil = new oB(true);
@@ -837,11 +840,13 @@ public class yq {
             colorsFileBuilder.addColor("colorAccent", String.format("#%06X", colorAccent & 0xffffff));
             colorsFileBuilder.addColor("colorControlHighlight", String.format("#%06X", colorControlHighlight & 0xffffff));
             colorsFileBuilder.addColor("colorControlNormal", String.format("#%06X", colorControlNormal & 0xffffff));
+            colorsFileBuilder.addColor("colorBackground", String.format("#%06X", colorBackground & 0xffffff));
             srcCodeBeans.add(new SrcCodeBean("colors.xml",
                     CommandBlock.applyCommands("colors.xml", colorsFileBuilder.toCode())));
 
             XmlBuilderHelper stylesFileBuilder = new XmlBuilderHelper();
             stylesFileBuilder.addStyle("AppTheme", "Theme.MaterialComponents.Light.NoActionBar" + (useNewMaterialComponentsTheme ? "" : ".Bridge"));
+            stylesFileBuilder.addItemToStyle("AppTheme", "android:colorBackground", "@color/colorBackground");
             stylesFileBuilder.addItemToStyle("AppTheme", "colorPrimary", "@color/colorPrimary");
             stylesFileBuilder.addItemToStyle("AppTheme", "colorPrimaryDark", "@color/colorPrimaryDark");
             stylesFileBuilder.addItemToStyle("AppTheme", "colorAccent", "@color/colorAccent");
@@ -857,18 +862,21 @@ public class yq {
         } else {
             XmlBuilderHelper stylesFileBuilder = new XmlBuilderHelper();
             stylesFileBuilder.addStyle("AppTheme", "@android:style/Theme.Material.Light.DarkActionBar");
+            stylesFileBuilder.addItemToStyle("AppTheme", "android:colorBackground", "@color/colorBackground");
             stylesFileBuilder.addItemToStyle("AppTheme", "android:colorPrimary", "@color/colorPrimary");
             stylesFileBuilder.addItemToStyle("AppTheme", "android:colorPrimaryDark", "@color/colorPrimaryDark");
             stylesFileBuilder.addItemToStyle("AppTheme", "android:colorAccent", "@color/colorAccent");
             stylesFileBuilder.addItemToStyle("AppTheme", "android:colorControlHighlight", "@color/colorControlHighlight");
             stylesFileBuilder.addItemToStyle("AppTheme", "android:colorControlNormal", "@color/colorControlNormal");
             stylesFileBuilder.addStyle("FullScreen", "@android:style/Theme.Material.Light.NoActionBar.Fullscreen");
+            stylesFileBuilder.addItemToStyle("FullScreen", "android:colorBackground", "@color/colorBackground");
             stylesFileBuilder.addItemToStyle("FullScreen", "android:colorPrimary", "@color/colorPrimary");
             stylesFileBuilder.addItemToStyle("FullScreen", "android:colorPrimaryDark", "@color/colorPrimaryDark");
             stylesFileBuilder.addItemToStyle("FullScreen", "android:colorAccent", "@color/colorAccent");
             stylesFileBuilder.addItemToStyle("FullScreen", "android:colorControlHighlight", "@color/colorControlHighlight");
             stylesFileBuilder.addItemToStyle("FullScreen", "android:colorControlNormal", "@color/colorControlNormal");
             stylesFileBuilder.addStyle("NoActionBar", "@android:style/Theme.Material.Light.NoActionBar");
+            stylesFileBuilder.addItemToStyle("NoActionBar", "android:colorBackground", "@color/colorBackground");
             stylesFileBuilder.addItemToStyle("NoActionBar", "android:colorPrimary", "@color/colorPrimary");
             stylesFileBuilder.addItemToStyle("NoActionBar", "android:colorPrimaryDark", "@color/colorPrimaryDark");
             stylesFileBuilder.addItemToStyle("NoActionBar", "android:colorAccent", "@color/colorAccent");
@@ -880,6 +888,7 @@ public class yq {
                     CommandBlock.applyCommands("styles.xml", stylesFileBuilder.toCode())));
 
             XmlBuilderHelper colorsFileBuilder = new XmlBuilderHelper();
+            colorsFileBuilder.addColor("colorBackground", String.format("#%06X", colorBackground & 0xffffff));
             colorsFileBuilder.addColor("colorPrimary", String.format("#%06X", colorPrimary & 0xffffff));
             colorsFileBuilder.addColor("colorPrimaryDark", String.format("#%06X", colorPrimaryDark & 0xffffff));
             colorsFileBuilder.addColor("colorAccent", String.format("#%06X", colorAccent & 0xffffff));
