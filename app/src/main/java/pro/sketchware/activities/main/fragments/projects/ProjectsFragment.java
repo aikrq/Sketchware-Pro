@@ -45,6 +45,7 @@ import dev.chrisbanes.insetter.Insetter;
 import mod.hey.studios.project.ProjectTracker;
 import mod.hey.studios.project.backup.BackupRestoreManager;
 import mod.hey.studios.util.Helper;
+import mod.remaker.activity.projectwizard.ProjectWizardActivity;
 import pro.sketchware.R;
 import pro.sketchware.activities.main.activities.MainActivity;
 import pro.sketchware.databinding.MyprojectsBinding;
@@ -92,7 +93,7 @@ public class ProjectsFragment extends DA implements View.OnClickListener {
     }
 
     public void toProjectSettingsActivity() {
-        Intent intent = new Intent(getActivity(), MyProjectSettingActivity.class);
+        Intent intent = new Intent(getActivity(), ProjectWizardActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         openProjectSettings.launch(intent);
     }

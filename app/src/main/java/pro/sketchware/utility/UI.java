@@ -63,7 +63,7 @@ public class UI {
         ViewCompat.setOnApplyWindowInsetsListener(
                 view,
                 (v, windowInsets) -> {
-                    Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+                    Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());
                     view.setPadding(
                             initialLeft + (left ? insets.left : 0),
                             initialTop + (top ? insets.top : 0),

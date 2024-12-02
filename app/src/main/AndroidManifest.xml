@@ -317,6 +317,11 @@
         <activity android:name="mod.bobur.StringEditorActivity"
             android:windowSoftInputMode="stateHidden|adjustPan"/>
 
+        <activity
+            android:name="mod.remaker.activity.projectwizard.ProjectWizardActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
             android:value="true" />

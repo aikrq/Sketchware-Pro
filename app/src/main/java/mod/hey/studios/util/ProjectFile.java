@@ -57,7 +57,7 @@ public class ProjectFile {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             return switch (color) {
-                case COLOR_CONTROL_HIGHLIGHT -> ctx.getColor(isDark ? android.R.color.system_accent1_100 : android.R.color.system_accent1_900);
+                case COLOR_CONTROL_HIGHLIGHT -> ctx.getColor(isDark ? android.R.color.system_accent1_900 : android.R.color.system_accent1_100);
                 case COLOR_BACKGROUND ->
                     getLStaredColor(ctx, android.R.color.system_neutral2_600,
                             0xfffafafa, isDark ? 6.0f : 98.0f);

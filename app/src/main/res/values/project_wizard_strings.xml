@@ -1,0 +1,4 @@
+<resources>
+    <string name="project_wizard_basic_title">New project</string>
+    <string name="project_wizard_basic_subtitle">Enter project name and package name to continue.</string>
+</resources>
