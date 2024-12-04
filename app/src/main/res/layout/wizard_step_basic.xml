@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingEnd="24dp"
-    android:paddingStart="24dp">
+    android:paddingStart="24dp"
+    android:transitionGroup="true">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_app_name"

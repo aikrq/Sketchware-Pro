@@ -35,7 +35,7 @@ public abstract class WizardStep {
 
     // Make sure that method is called after `setParentLayout(IWizardLayout)`.
     private void configureStep(WizardStepBinding binding) {
-        binding.toolbar.setNavigationOnClickListener(v -> {
+        binding.btnBack.setOnClickListener(v -> {
             if (getParentActivity() != null) {
                 getParentActivity().onBackPressed();
             }
@@ -89,10 +89,7 @@ public abstract class WizardStep {
     }
 
     public Activity getParentActivity() {
-        if (parentLayout != null) {
-            return parentLayout.getParentActivity();
-        }
-        return null;
+        return parentLayout != null ? parentLayout.getParentActivity() : null;
     }
 
     public Context getContext() {

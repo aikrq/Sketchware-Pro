@@ -5,6 +5,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.transition.TransitionManager;
+
+import com.google.android.material.transition.MaterialSharedAxis;
+
 import mod.remaker.activity.projectwizard.ProjectWizardActivity;
 
 import pro.sketchware.R;
@@ -49,6 +53,8 @@ public class WizardLayout extends FrameLayout implements IWizardLayout {
         containerViewBack.addView(wrappedView);
         wrappedView.setLayoutParams(new LayoutParams(-1, -1));
         steps.add(step);
+
+        buildLayoutAnimation(true);
 
         FrameLayout temp = containerView;
         containerView = containerViewBack;
@@ -115,6 +121,8 @@ public class WizardLayout extends FrameLayout implements IWizardLayout {
             if (stepView == null) {
                 stepView = previousStep.onCreateView(activity);
             }
+
+            buildLayoutAnimation(false);
 
             containerView.setVisibility(View.VISIBLE);
             removeViewFromParent(stepView);
@@ -205,10 +213,7 @@ public class WizardLayout extends FrameLayout implements IWizardLayout {
     }
 
     public WizardStep getLastStep() {
-        if (steps.isEmpty()) {
-            return null;
-        }
-        return steps.get(steps.size() - 1);
+        return !steps.isEmpty() ? steps.get(steps.size() - 1) : null;
     }
 
     private void presentStepInternalRemoveOld(boolean removeLast, WizardStep step) {
@@ -285,5 +290,10 @@ public class WizardLayout extends FrameLayout implements IWizardLayout {
         if (view != null && view.getBackground() == null) {
             view.setBackgroundColor(ThemeUtils.getColor(view, R.attr.colorSurface));
         }
+    }
+
+    private void buildLayoutAnimation(final boolean open) {
+        MaterialSharedAxis transition = new MaterialSharedAxis(MaterialSharedAxis.X, open);
+        TransitionManager.beginDelayedTransition(this, transition);
     }
 }
