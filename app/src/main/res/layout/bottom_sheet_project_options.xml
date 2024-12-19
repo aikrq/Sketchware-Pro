@@ -3,24 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingBottom="16dp">
 
-    <View
-        android:layout_width="50dp"
-        android:layout_height="5dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/rounded_bottom_sheet_slider" />
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:text="Project settings"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:textAppearance="?attr/textAppearanceTitleLarge" />
 
     <LinearLayout
         android:id="@+id/project_settings"
@@ -31,38 +28,32 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="12dp">
+        android:paddingVertical="16dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_tune" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_tune" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:text="Change project settings"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_arrow_right" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
 
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:background="?colorSurfaceContainerHigh" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/project_backup"
@@ -73,38 +64,32 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="12dp">
+        android:paddingVertical="16dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_history" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_history" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:text="Backup project"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_arrow_right" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
 
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:background="?colorSurfaceContainerHigh" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/export_sign"
@@ -115,38 +100,32 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="12dp">
+        android:paddingVertical="16dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_export" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_export" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:text="Export/Sign"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_arrow_right" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
 
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:background="?colorSurfaceContainerHigh" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/project_config"
@@ -157,38 +136,32 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="12dp">
+        android:paddingVertical="16dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_toggle" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_toggle" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:text="Project configuration"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_arrow_right" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
 
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:background="?colorSurfaceContainerHigh" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/project_delete"
@@ -199,39 +172,27 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="12dp">
+        android:paddingVertical="16dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="3dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_delete"
-            app:tint="?colorError" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_delete"
+            app:tint="?attr/colorError" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:text="Delete project"
-            android:textColor="?colorError"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textColor="?attr/colorError"
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_mtrl_arrow_right" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:background="?colorSurfaceContainerHigh" />
 
 </LinearLayout>
