@@ -32,7 +32,7 @@
             android:clickable="true"
             android:focusable="true"
             app:cardBackgroundColor="?attr/colorSurfaceContainer"
-            app:cardCornerRadius="?attr/shapeAppearanceCornerLarge"
+            app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge"
             app:strokeWidth="0.5dp">
 
             <com.google.android.material.tabs.TabLayout
@@ -58,10 +58,6 @@
             </com.google.android.material.tabs.TabLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
