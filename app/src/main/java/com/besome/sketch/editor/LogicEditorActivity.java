@@ -48,7 +48,6 @@ import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -2210,9 +2209,6 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         T = (int) wB.a(getBaseContext(), (float) T);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(v -> {
             if (!mB.a()) {
                 onBackPressed();
@@ -2222,17 +2218,12 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         A = ViewConfiguration.get(getContext()).getScaledTouchSlop();
         F = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         String stringExtra = getIntent().getStringExtra("event_text");
-        ActionBar d;
-        if (C.equals("onCreate")) {
-            d = getSupportActionBar();
-        } else if (C.equals("_fab")) {
-            d = getSupportActionBar();
+        if (C.equals("_fab")) {
             stringExtra = "fab : " + stringExtra;
         } else {
-            d = getSupportActionBar();
-            stringExtra = ReturnMoreblockManager.getMbName(C) + " : " + stringExtra;
+            stringExtra = ReturnMoreblockManager.getMbName(C) + ": " + stringExtra;
         }
-        d.setTitle(stringExtra);
+        toolbar.setSubtitle(stringExtra);
         paletteSelector = findViewById(R.id.palette_selector);
         paletteSelector.setOnBlockCategorySelectListener(this);
         m = findViewById(R.id.palette_block);

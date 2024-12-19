@@ -48,7 +48,7 @@
             android:layout_marginBottom="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_user"
-            app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge" />
+            app:shapeAppearance="?attr/shapeAppearanceCornerLarge" />
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -3,8 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingEnd="16dp"
-    android:paddingStart="16dp"
     android:paddingBottom="16dp">
 
     <com.google.android.material.bottomsheet.BottomSheetDragHandleView
@@ -13,11 +11,12 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="10dp"
-        android:text="Project settings"
-        android:textAppearance="?attr/textAppearanceTitleLarge" />
+        android:text="Project Settings"
+        android:textAppearance="?attr/textAppearanceHeadlineSmallEmphasized" />
 
     <LinearLayout
         android:id="@+id/project_settings"
@@ -28,6 +27,7 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="16dp">
 
         <ImageView
@@ -36,24 +36,15 @@
             app:srcCompat="@drawable/ic_mtrl_tune" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
             android:text="Change project settings"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            app:drawableEndCompat="@drawable/ic_mtrl_arrow_right" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/project_backup"
@@ -64,6 +55,7 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="16dp">
 
         <ImageView
@@ -72,24 +64,16 @@
             app:srcCompat="@drawable/ic_mtrl_history" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
             android:text="Backup project"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            app:drawableEndCompat="@drawable/ic_mtrl_arrow_right" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="24dp" />
+    9
 
     <LinearLayout
         android:id="@+id/export_sign"
@@ -100,6 +84,7 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="16dp">
 
         <ImageView
@@ -108,24 +93,15 @@
             app:srcCompat="@drawable/ic_mtrl_export" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
             android:text="Export/Sign"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            app:drawableEndCompat="@drawable/ic_mtrl_arrow_right" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/project_config"
@@ -136,6 +112,7 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="16dp">
 
         <ImageView
@@ -144,24 +121,15 @@
             app:srcCompat="@drawable/ic_mtrl_toggle" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
             android:text="Project configuration"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            app:drawableEndCompat="@drawable/ic_mtrl_arrow_right" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="24dp" />
 
     <LinearLayout
         android:id="@+id/project_delete"
@@ -172,6 +140,7 @@
         android:focusable="true"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
         android:paddingVertical="16dp">
 
         <ImageView
@@ -181,18 +150,15 @@
             app:tint="?attr/colorError" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
             android:text="Delete project"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
             android:textColor="?attr/colorError"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            app:drawableEndCompat="@drawable/ic_mtrl_arrow_right" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_mtrl_arrow_right" />
     </LinearLayout>
 
 </LinearLayout>
