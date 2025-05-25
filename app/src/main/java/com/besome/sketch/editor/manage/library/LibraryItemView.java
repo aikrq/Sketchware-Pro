@@ -16,7 +16,7 @@ import a.a.a.xB;
 import pro.sketchware.R;
 
 public class LibraryItemView extends FrameLayout {
-    public final CardView container;
+    public final View container;
     public final ImageView icon;
     public final TextView title;
     public final TextView description;
