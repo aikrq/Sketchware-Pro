@@ -52,6 +52,14 @@ public class LibraryItemView extends FrameLayout {
         enabled.setVisibility(View.GONE);
     }
 
+    public void setIsTop() {
+        container.setBackgroundResource(R.drawable.base_item_background_top);
+    }
+
+    public void setIsBottom() {
+        container.setBackgroundResource(R.drawable.base_item_background_bottom);
+    }
+
     @Override
     public void setOnClickListener(View.OnClickListener listener) {
         container.setOnClickListener(listener);
